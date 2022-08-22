@@ -9,6 +9,12 @@ nato_dict = {row.letter:row.code for (index, row) in data.iterrows()}
 
 # TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
-user_input = input("Word to translate to NATO alphabet: ").upper()
-translated = [nato_dict[letter] for letter in user_input]
-print(translated)
+program_is_on = True
+
+while program_is_on:
+    user_input = input("Word to translate to NATO alphabet: ").upper()
+    if user_input == "STOP":
+        program_is_on = False
+        break
+    translated = [nato_dict[letter] for letter in user_input]
+    print(translated)
