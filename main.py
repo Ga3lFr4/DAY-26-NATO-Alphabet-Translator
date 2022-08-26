@@ -18,6 +18,7 @@ while program_is_on:
         break
     try:
         translated = [nato_dict[letter] for letter in user_input]
-        print(translated)
     except KeyError:
         print("Sorry, only letters in the alphabet please")
+    else:
+        print(translated)
